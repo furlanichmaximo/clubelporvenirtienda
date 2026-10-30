@@ -1,22 +1,4 @@
- (## Lógica (dentro del `<script>` de index.html))
-- `PRODUCTS`: catálogo (id, categoría, precio ARS, flags `sizes`, `socio` = 10% OFF a socios, `envio` = envío gratis, `nuevo`).
-- Constantes de negocio: `SHIPPING` ($6.500), `FREE_SHIP_FROM` ($120.000), `SOCIO_OFF` (10%).
-- `state` guarda filtro, búsqueda, talle elegido por producto y carrito; se persiste en `localStorage` (`pm_cart`, `pm_delivery`, `pm_socio`).
-- `state` guarda filtro, búsqueda, talle elegido por producto y carrito; se persiste en `localStorage` (`pm_cart`, `pm_delivery`, `pm_socio`, `pm_payment`, `pm_user`).
-- Render por funciones (`renderGrid`, `renderCart`) que reescriben innerHTML; los eventos se manejan con un único listener delegado usando atributos `data-*` (`data-nav`, `data-size`, `data-add`, `data-quick`, `data-qty`, `data-rm`, `data-close`).
-- El checkout de Mercado Pago es una simulación (no hay backend ni cobros).
-- El checkout de Mercado Pago es una simulación (no hay backend ni cobros). Métodos: `wallet` (Billetera Mercado Pago → pantalla de redirección + pasarela simulada) y `card` (tarjeta con cuotas).
-- Login/registro también simulado (`openAuth`, `signIn`): solo guarda `{ name, email, provider }` en `pm_user`, nunca la contraseña. Google/Facebook son botones de demo.
-
-## Convenciones
-- Textos en español rioplatense. Precios con `ars()` (formato es-AR).
-- Escapar texto dinámico con `esc()` antes de insertarlo en HTML.
-
-## Pendiente / ideas
-- Login real con Netlify Identity.
-- Checkout real con Mercado Pago vía Netlify Function, catálogo/pedidos en Netlify Database.
-- Los enlaces a redes sociales y el e-mail de contacto son supuestos razonables: confirmar con el club.
-
+<!DOCTYPE html>
 img/escudo.png
 added
 
